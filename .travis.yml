@@ -1,13 +1,15 @@
-#travis configuration for testing
 language: cpp
+compiler: gcc
+dist: trusty
 
+before_install:
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
 
-# Compiler selection
-compiler:
-  - clang
+install: 
+  - sudo apt-get install -qq g++-6
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
 
-
-# Build steps
-script:
-  - clang++ cities_task.cpp -o task_3
-  - ./task_3
+script: 
+  - g++ cities_task.cpp -std=c++17 -o cities_task
+  - ./cities_task
