@@ -193,5 +193,6 @@ void testDjikstra() {
 int main() {
     //run(std::cin, std::cout);
     testDjikstra();
+    std::cout << "All tests ran successfully!";
     return 0;
 }
