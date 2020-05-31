@@ -13,4 +13,5 @@ script:
   - mkdir build
   - cd build
   - cmake ..
-  - cmake --build . 
+  - cmake --build .
+  - ./33WeightGraph
