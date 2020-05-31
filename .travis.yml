@@ -4,16 +4,10 @@ language: cpp
 
 # Compiler selection
 compiler:
-  - clang
   - gcc
 
 
 # Build steps
 script:
-  - mkdir build
-  - cd build
-  - cmake ..
-  - make
-  - cmake
-  - ./33WeightGraph
-
+  - g++ cities_task.cpp -o task_3
+  - ./task_3
