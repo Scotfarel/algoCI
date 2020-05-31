@@ -4,10 +4,10 @@ language: cpp
 
 # Compiler selection
 compiler:
-  - gcc
+  - clang
 
 
 # Build steps
 script:
-  - g++ cities_task.cpp -o task_3
+  - clang++ cities_task.cpp -o task_3
   - ./task_3
