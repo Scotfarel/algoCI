@@ -1,0 +1,16 @@
+#travis configuration for testing
+language: cpp
+
+
+# Compiler selection
+compiler:
+  - clang
+  - gcc
+
+
+# Build steps
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - cmake --build . 
